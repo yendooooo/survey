@@ -4,6 +4,6 @@
 메인
 @endsection
 
-<div>
-    dd
-</div>
+@section("content")
+
+@endsection
