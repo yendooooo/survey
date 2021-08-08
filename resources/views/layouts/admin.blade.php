@@ -27,23 +27,27 @@
                 <span>사이트 관리</span>
                 <i class="fas fa-plus arrow"></i>
             </li>
-            <li class="active">
+            <li class="{{$type == 'dashBoard'? 'active':''}}">
                 <i class="fas fa-th-list"></i>
                 <span>대시보드</span>
-                <i class="fas fa-caret-up arrow"></i>
+                <i class="fas fa-caret-{{$type == 'dashBoard'? 'down':'up'}} arrow"></i>
             </li>
+            <ol class="{{$type == 'dashBoard'? 'on':''}}">
+                <li><a href="/">메인</a></li>
+            </ol>
+
             <li>
                 <i class="fas fa-user-alt"></i>
                 <span>사용자 관리</span>
                 <i class="fas fa-caret-up arrow"></i>
             </li>
-            <li>
+            <li class="{{$type == 'category'? 'active':''}}">
                 <i class="fas fa-poll"></i>
                 <span>설문</span>
-                <i class="fas fa-caret-up arrow"></i>
+                <i class="fas fa-caret-{{$type == 'category'? 'down':'up'}} arrow"></i>
             </li>
-            <ol class="{{}}">
-                <li><a href="admin/category">분류등록</a></li>
+            <ol class="{{$type == 'category'? 'on':''}}">
+                <li><a href="category">분류등록</a></li>
                 <li>설문등록</li>
             </ol>
             <li>
@@ -59,9 +63,7 @@
             <h1 class="main-title">@yield("title", "메인")</h1>
         </header>
     </main>
-
 </div>
-
-<script src="js/admin.js"></script>
+<script src="../js/admin.js"></script>
 </body>
 </html>

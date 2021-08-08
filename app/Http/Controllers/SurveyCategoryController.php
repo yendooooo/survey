@@ -13,7 +13,10 @@ class SurveyCategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.category');
+        return view(
+            'admin.category',
+            ['type' => 'category']
+        );
     }
 
     /**
