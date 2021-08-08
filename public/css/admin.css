@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@700&display=swap');
+body {font-family: 'Nanum Gothic', sans-serif;}
+:root {
+    --bg-color: rgba(0,0,0,0.8);
+    --font-default-opacity : .56;
+}
+
+/*메뉴로고*/
+#app {}
+#app > nav {position: fixed;width: 282px; height: 100%;min-height: 100vh;background-color: var(--bg-color);}
+#app .nav-logo {margin: 29px 15px 58px; color: #fff; }
+#app .nav-logo img { width: 80px; height: 72px; vertical-align: middle; margin-right: 10px;}
+#app .nav-logo span {font-family: 'Noto Sans KR', sans-serif;letter-spacing: 5px; font-size: 24px}
+
+/*메뉴 타이틀명*/
+#app .nav-list .nav-info {padding-left: 10px; opacity: var(--font-default-opacity);}
+#app .nav-list .nav-info span {font-size: 16px}
+#app .nav-list .nav-info i {font-size: 20px;}
+
+/*1차메뉴*/
+#app .nav-list {color:#fff; }
+#app .nav-list li {padding: 20px 30px 20px;}
+#app .nav-list li a {color:#fff;}
+#app .nav-list li i {font-size: 24px; }
+#app .nav-list li span {font-size: 19px;}
+#app .nav-list li .arrow {float: right}
+#app .nav-list .active {background-color: #0A82FF; background-size:30px;}
+
+
+/*2차메뉴*/
+#app .nav-list ol {display: none}
+#app .nav-list .on {display: block}
+#app .nav-list ol li{padding: 20px 45px 20px;}
+
+#app #main {height: 100%;}
+#app #main header {height: 100px;box-shadow: 0px 3px 6px #00000029; margin-left: 283px; line-height: 100px;}
+#app #main header .main-title {margin-left: 50px}
