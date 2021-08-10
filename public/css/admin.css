@@ -28,9 +28,11 @@ body {font-family: 'Nanum Gothic', sans-serif;}
 
 
 /*2차메뉴*/
-#app .nav-list ol {display: none}
-#app .nav-list .on {display: block}
-#app .nav-list ol li{padding: 20px 45px 20px;}
+#app .nav-list .nav-sub-menu {max-height: 0;  transition: all .35s; overflow: hidden}
+#app .nav-list .on {max-height: 100px;}
+#app .nav-list .nav-sub-menu li{padding: 20px 45px 20px; display: block}
+
+
 
 #app #main {height: 100%;}
 #app #main header {height: 100px;box-shadow: 0px 3px 6px #00000029; margin-left: 283px; line-height: 100px;}

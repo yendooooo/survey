@@ -82,8 +82,8 @@ function menuActive(e) {
             menu.classList.remove('active');
 
             //---
-            if (menu.children.length === 2)
-                continue
+            if (menu.nodeName === 'OL')
+                continue;
 
             //--- 모든 화살표 방향을 위로 향하게 바꿉니다.
             menu.children[2].classList.remove('fa-caret-down');
