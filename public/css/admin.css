@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@700&display=swap');
 body {font-family: 'Nanum Gothic', sans-serif;}
 :root {
-    --bg-color: #C65FF9;
+    --bg-color: #00217B;
     --font-color: #AD19EC;
     --line-color:#e5e5e5;
     --green-color:#00cd3c;
@@ -24,7 +24,7 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
 
-button {
+.btn {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -62,8 +62,10 @@ select {
 
 /*메뉴로고*/
 #app {}
-#app > nav {position: fixed;width: 230px; height: 90%;min-height: 90vh;background-color: var(--bg-color); margin-top: 50px; border-radius: 10px;}
-
+#app > nav {position: fixed;width: 230px; min-height: 100vh;background-color: var(--bg-color);}
+#app .nav-logo {margin: 24px 15px 41px 31px; color: #fff; }
+#app .nav-logo img { width: 94px; height:40px; vertical-align: middle; margin-right: 10px;}
+#app .nav-logo span {font-family: 'Noto Sans KR', sans-serif;letter-spacing: 5px; font-size: 24px}
 
 /*메뉴 타이틀명*/
 #app .nav-list .nav-info {padding-left: 10px; opacity: var(--font-default-opacity);}
@@ -71,8 +73,8 @@ select {
 #app .nav-list .nav-info i {font-size: 16px;}
 
 /*1차메뉴*/
-#app .nav-list {color:#fff; }
-#app .nav-list li {padding: 20px 30px 20px;}
+#app .nav-list {color:#C8C8C8; }
+#app .nav-list li {padding: 20px 29px 18px;}
 #app .nav-list li a {color:#fff;}
 #app .nav-list li i {font-size: 16px; }
 #app .nav-list li span {font-size: 15px;}
@@ -89,8 +91,17 @@ select {
 
 
 /*헤더*/
-#app #main header {height: 50px; color: var(--font-color); box-shadow: 0px 3px 6px #00000029;  line-height: 50px; }
-#app #main header .main-title {margin-left: 50px}
+#app #main header {height: 64px; font-size:15px; color: #363636; border-bottom: 1px solid #00000029;  line-height: 64px; text-align: right}
+#app #main header ul {margin-right: 30px;}
+#app #main header ul li {font-size: 15px; letter-spacing: -0.45px; float: right}
+#app #main header ul .introduce {color: #555555; margin-left: 20px;}
+#app #main header ul li .extension {border: 1px solid #C8C8C8; background: #F5F5F5; padding: 4px 11px 4px 11px; color: #555555}
+#app #main header ul li a {color: #fff; border-radius: 50px; padding: 7px 18px 6px 18px;}
+#app #main header ul li .logout-btn {background-color: #284DB7; }
+#app #main header ul li .modify-btn {background-color: #969696; margin-left:18px; margin-right: 5px;}
+#app #main header ul li .d-day {color: #F40700}
+
+
 
 /*메인 네비*/
 #main .main-navi {height: 60px; background-color: #fff;}

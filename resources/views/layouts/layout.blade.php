@@ -3,56 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>태영이 | @yield("title", "main")</title>
+    <title>관리자 | @yield("title", "main")</title>
 
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/reset.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="/css/compile/fontawesome.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/compile/fontawesome.css">
 
 </head>
 <body>
+<div id="app">
+    <nav id="nav">
+        <div class="nav-logo"><img src="../../img/logo.png" alt=""></div>
+        <ul class="nav-list">
+            <li class="">
+                <span>일일정보</span>
+            </li>
+            <li class="">
+                <span>노무자 일정보</span>
+            </li>
+            <li class="">
+                <span>일일정보</span>
+            </li>
+            <li class="">
+                <span>노무관리</span>
+            </li>
+            <li class="">
+                <span>거래처관리</span>
+            </li>
+            <li class="">
+                <span>노무자문서</span>
+            </li>
+            <li class="">
+                <span>거래처문서</span>
+            </li>
+            <li class="">
+                <span>문의하기</span>
+            </li>
+            <li class="">
+                <span>공지사항</span>
+            </li>
+        </ul>
+        <!-- end .nav-list -->
+    </nav>
 
-<div class="header_event">
-</div>
 
-<div>
-    <nav class="header">
-        <div class="header_navi">
-            <ul class="navi_list">
-                <li class="list-item"><a href=""><span>Logo</span></a></li>
-                <li class="list-item"><a href="" class="current"><span>컨설팅</span></a></li>
-                <li class="list-item"><a href=""><span>정보마당</span></a></li>
-                <li class="list-item"><a href=""><span>MY비즈니스</span></a></li>
-                <li class="list-item"><a href=""><span>기업홍보관</span></a></li>
-                <li class="list-item"><a href="javascript:void(0)"><span><i class="fas fa-cog"></i></span></a></li>
+    {{--   <ol class="nav-sub-menu">
+           <i class="fas fa-minus"></i>
+           <li><a href="admin/"></a></li>
+       </ol>--}}
+
+
+    <main id="main">
+        <!--head-->
+        <header>
+            <ul>
+                <li>
+                    <a href="" class="logout-btn">로그아웃</a>
+                </li>
+                <li>
+                    <a href="" class="modify-btn">정보수정</a>
+                </li>
+                <li class="introduce">
+                    <span class="">홍길동</span> 님 환영합니다.
+                </li>
+                <li>
+                    이용기간 : 2021-07-01 ~ 2021-07-31
+                    <span class="d-day">(D-1)</span>
+                    <button class="extension">연장</button>
+                </li>
             </ul>
+
+
+        </header>
+
+        <nav class="main-navi">
+
+        </nav>
+
+        <!-- body -->
+        <div class="content-body">
+            @yield('content')
         </div>
+    </main>
+    <!-- end main -->
 
-        <div class="header_menu">
-            
-        </div>
-    </nav>
-
-
-
-    @if($_SERVER['REQUEST_URI'] != '/')
-    <nav class="sub-header">
-        <div class="sub-header_text">
-            <span><strong>글로벌 창업</strong>스타기업의</span>
-            <span><strong>든든한 길잡이</strong>가 되겠습니다</span>
-        </div>
-    </nav>
-    @endif
-
-@yield("content")
-
+    <footer>
+        <div>COPYRIGHT 2021 일가다 ALL RIGHTS RESERVED.</div>
+    </footer>
 </div>
-
-    <script src="js/app.js"></script>
-    <script src="js/bootstrap.js"></script>
+<script src="http://{{$_SERVER['HTTP_HOST']}}//js/admin.js"></script>
 </body>
 </html>
