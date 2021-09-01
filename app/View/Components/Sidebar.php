@@ -8,8 +8,8 @@ use App\Models\Menu;
 class Sidebar extends Component
 {
 
-    public $first_menu;
-    public $second_menu;
+    public $first_menus;
+    public $second_menus;
 
     /**
      * Create a new component instance.
@@ -19,8 +19,8 @@ class Sidebar extends Component
     public function __construct()
     {
         //--- Menu table에서 관리자 메뉴를 가져 옵니다.
-        $this->first_menu = Menu::where('depth', 1)->get();
-        $this->second_menu = Menu::where('depth', 2)->get();
+        $this->first_menus = Menu::where('depth', 1)->get();
+        $this->second_menus = Menu::where('depth', 2)->get();
     }
 
     /**
@@ -32,8 +32,8 @@ class Sidebar extends Component
     {
         return view('components.sidebar',
             [
-                '1depth' => $this->first_menu,
-                '2depth' => $this->second_menu,
+                'first_menus' => $this->first_menus,
+                'second_menus' => $this->second_menus,
             ]);
     }
 

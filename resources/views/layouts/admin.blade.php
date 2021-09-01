@@ -8,22 +8,32 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>관리자 | @yield("title", "main")</title>
 
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/reset.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="../css/compile/fontawesome.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/compile/fontawesome.css">
 
 </head>
 <body>
 <div id="app">
-    <x-sidebar :type="$type"/>
+    <x-sidebar :type="$type"></x-sidebar>
 
     <main id="main">
+        <!--head-->
         <header>
             <h1 class="main-title">@yield("title", "메인")</h1>
         </header>
+
+        <nav class="main-navi">
+
+        </nav>
+
+        <!-- body -->
+        <div class="content-body">
+            @yield('content')
+        </div>
     </main>
 </div>
-<script src="../js/admin.js"></script>
+<script src="http://{{$_SERVER['HTTP_HOST']}}//js/admin.js"></script>
 </body>
 </html>
