@@ -1,0 +1,12 @@
+.popup-container {width: 100%;}
+.popup-container .popup-wrap {z-index: 9999; background-color: rgba(0, 0, 0, .3); justify-content: center; align-items: center; position: fixed; top: -100px; left: 0; right: 0; bottom: 0; display: flex; padding: 15px;}
+.popup-container .wrap-box { width: 486px; height:533px;  background: #fff; border: 1px solid #00217B; padding: 28px 30px}
+.popup-container .box-head {display:flex; justify-content: space-between;}
+.popup-container .head-title {font-size: 20px; letter-spacing: -0.6px; color: #363636; font-weight: bold}
+.popup-container .close_btn {width: 16px; height: 16px; cursor: pointer}
+
+.popup-container .box-section {margin-top: 21px;}
+.popup-container .box-section h3 {letter-spacing: -0.48px; color: #00217B; margin-bottom: 13px}
+.popup-container .box-section .section-term input {margin-bottom: 20px;}
+.popup-container .box-section .section-term label {margin-right: 50px;}
+

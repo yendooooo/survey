@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@700&display=swap');
 body {font-family: 'Nanum Gothic', sans-serif;}
 :root {
-    --bg-color: #00217B;
+    --bg-color: #F5F5F5;
     --font-color: #AD19EC;
     --line-color:#e5e5e5;
     --green-color:#00cd3c;
@@ -13,16 +13,16 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     --button-hover-bg-color: #025ce2;
 }
 
-/*기본*/
-.input { width: 300px; height: 25px; padding: 6px 12px; font-size: 14px; line-height: 1.42857143; color: #555; background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
+/* =============================================default ============================================= */
+
+.input { width: 300px; height: 25px; padding: 6px 12px; font-size: 14px; color: #555; background-color: #fff; border: 1px solid #ccc;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
     box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
+
 
 .btn {
     -webkit-appearance: none;
@@ -59,10 +59,24 @@ select {
     color: #555;
 }
 
+/*테이블*/
+.table {background-color:#fff; box-shadow: 0 1px 1px rgb(0 0 0 / 4%); width: 98%}
+.table thead {background-color: #fff; border-top: 2px solid #000;}
+.table td .content-body th { text-align: left; vertical-align: middle;}
+.table th {height: 48px; border-top: 1px solid var(--line-color); border-bottom: 1px solid var(--line-color);  color: #3D3D3D; font-size: 15px;}
+.table td {height: 40px; border-bottom: 1px solid #f2f2f2; color: #3D3D3D; font-size: 15px; letter-spacing: -0.45px;}
+.table tr:nth-child(2n+0){background: #F5F5F5}
+
+.table02 th {border-top: 1px solid #EBEBEB; border-bottom: 1px solid #EBEBEB; background: #F5F5F5; padding-left:10px; width: 180px; height:55px; text-align: left; font-size: 15px; color: #3D3D3D; letter-spacing: -0.45px;}
+.table02 td {border-top: 1px solid #EBEBEB; border-bottom: 1px solid #EBEBEB; min-width: 620px; padding-left: 10px; color: #3D3D3D; font-size: 15px; letter-spacing: -0.45px}
+
+/*버튼*/
+.btn01 {width: 80px; height: 40px; letter-spacing: -0.45px; color: #555555; opacity: 1; border: 1px solid #969696; background: #F5F5F5; cursor: pointer}
+/* ============================================= end default ============================================= */
 
 /*메뉴로고*/
 #app {}
-#app > nav {position: fixed;width: 230px; min-height: 100vh;background-color: var(--bg-color);}
+#app > nav {position: fixed;width: 230px; min-height: 100vh;background-color: #00217B;}
 #app .nav-logo {margin: 24px 15px 41px 31px; color: #fff; }
 #app .nav-logo img { width: 94px; height:40px; vertical-align: middle; margin-right: 10px;}
 #app .nav-logo span {font-family: 'Noto Sans KR', sans-serif;letter-spacing: 5px; font-size: 24px}
@@ -91,7 +105,7 @@ select {
 
 
 /*헤더*/
-#app #main header {height: 64px; font-size:15px; color: #363636; border-bottom: 1px solid #00000029;  line-height: 64px; text-align: right}
+#app #main header {height: 64px; font-size:15px; color: #363636; border-bottom: 1px solid #00000029;  line-height: 60px; text-align: right}
 #app #main header ul {margin-right: 30px;}
 #app #main header ul li {font-size: 15px; letter-spacing: -0.45px; float: right}
 #app #main header ul .introduce {color: #555555; margin-left: 20px;}
@@ -107,15 +121,18 @@ select {
 #main .main-navi {height: 60px; background-color: #fff;}
 
 /*바디*/
-#app #main .content-body {margin-left: 283px; min-height: 700px;}
+#app #main .content-body {margin-left: 260px; margin-top: 40px; }
 
 /*바디 컨텐츠*/
 #main .content-body .main-contents {display: flex}
 
 /*컨텐트 레프트*/
-.main-contents .content-left {flex: 1 1 40%; min-height:700px; margin-right: 20px;}
-.main-contents .content-left .quantity {display: flex}
-.main-contents .content-left .quantity div {width: 400px; height: 160px; background: #F5F5F5 0% 0% no-repeat padding-box; border-radius: 10px; margin-right: 10px;}
+.main-contents .content-left {flex: 1 1 37%; min-height:700px; }
+.main-contents .content-left .quantity-box {display: flex}
+.main-contents .content-left .quantity-box > div {display:flex;flex-flow: column;width: 400px; height: 160px; background: #F5F5F5; border-radius: 10px; margin-right: 10px; justify-content: center;align-items: center; text-align: center; font-size: 20px; letter-spacing: -0.6px; font-weight: bold}
+.main-contents .content-left .quantity-box div:nth-child(1) img {width: 25px; height: 25px;}
+.main-contents .content-left .quantity-box .quantity--personnel {margin-top: 20px}
+.main-contents .content-left .quantity-box .quantity--personnel span {font-size: 30px;}
 
 .main-contents .content-left .daily-box {margin-top: 26px;}
 .main-contents .content-left .daily-box h3 {margin-bottom: 10px;}
@@ -126,20 +143,62 @@ select {
 
 
 /*컨텐트 라이트*/
-.main-contents .content-right {padding: 10px; flex: 1 1 40%; min-height: 700px;}
+.main-contents .content-right {flex: 1 1 37%; padding-left:20px;min-height: 700px;}
+.main-contents .content-right #graph {width: 762px; height: 331px;}
+.main-contents .content-right .laborer-box {display: flex; margin-top: 3px;}
+.main-contents .content-right .laborer-box > a {display:flex; flex-flow: column; justify-content:center; align-items:center; text-align:center; width: 237px; height: 220px; margin-right: 20px; background-color: var(--bg-color); border-radius: 10px; letter-spacing: -0.6px;}
+.main-contents .content-right .laborer-box > a span {color: #3D3D3D; letter-spacing: -0.51px; font-weight: bold; margin-top: 19px;}
+.main-contents .content-right .laborer-box img {display: block}
+.main-contents .content-right .laborer-box img:nth-child(1) {width: 76px; height: 40px;}
+.main-contents .content-right .laborer-box img:nth-child(2) {width: 66px; height: 45px;}
+.main-contents .content-right .laborer-box img:nth-child(3) {width: 39px; height: 48px;}
 
-
-/*테이블*/
-.content-body table {background-color:#fff; box-shadow: 0 1px 1px rgb(0 0 0 / 4%); width: 90%}
-.content-body thead {background-color: #fff;}
-.content-body td .content-body th { text-align: left; vertical-align: middle;}
-.content-body th {height: 48px; border-top: 1px solid var(--line-color); border-bottom: 1px solid var(--line-color); font-size: 13px; color: #606060;}
-.content-body td {height: 40px; border-bottom: 1px solid #f2f2f2;}
-.content-body tr:nth-child(2n+0){background: #F5F5F5}
+/* 거래처 일정보 */
+.main-contents .content-right .account-box {margin-top: 18px;}
+.main-contents .content-right .account-box h3 {margin-bottom: 10px;}
 
 .content-right .depth {border-radius:50%; padding:5px 10px 5px 10px; color:#fff; text-align:center;}
 .content-right .first {background-color:var(--green-color);}
 .content-right .second {background-color:var(--blue-color);}
 
-footer {margin-top:20px; border-top:1px solid var(--line-color); min-height: 150px; text-align: center;}
-footer div {margin-top:20px; }
+footer {display:flex;justify-content: center; align-items:center; margin-top:20px; border-top:1px solid var(--line-color); min-height: 150px; text-align: center;}
+footer div {display:flex;  letter-spacing: -0.45px; color: #969696; font-size: 15px;}
+
+
+
+/* ============= 비밀번호 확인 ============= */
+.confirm-content {text-align: center}
+.confirm-content > p {font-size: 30px; font-weight:bold; letter-spacing: -0.9px; color: #000000; margin-bottom: 33px;}
+.confirm-content .content-guide p {font-size: 20px; letter-spacing: -0.6px; font-weight: bold;}
+.confirm-content .content-guide p:nth-child(1) {color: #00217B;}
+.confirm-content .content-guide p:nth-child(2) {color: #000000; margin-top:6px;}
+
+.confirm-content .confirm-info {margin-top: 73px; }
+.confirm-content .confirm-info div {color: #3D3D3D; font-size: 15px; letter-spacing: -0.45px; margin-right: 330px; font-weight: bold;}
+.confirm-content .confirm-info span {letter-spacing: -0.45px; color: #3D3D3D; display: block; margin-right: 340px; margin-top: 8px; font-weight: bold;}
+.confirm-content .confirm-info input[type="text"] {width:400px; height: 50px; background:#fff; border: 1px solid #969696; color: #3D3D3D; font-size: 15px; letter-spacing: -0.45px; margin-top: 19px}
+
+.confirm-box {margin-top: 30px; margin-bottom: 49px; }
+.confirm-box button {letter-spacing: -0.45px; padding: 9px 31px; border: none; cursor: pointer;}
+.confirm-box button:nth-child(1){color: #555;  background-color: #D2D2D2;}
+.confirm-box button:nth-child(2){color: #fff;  background-color: #00217B; }
+
+
+/* ============= 회원정보 수정 페이지  ============= */
+.member-content {}
+.member-content h3 {font-size: 20px; letter-spacing: -0.6px; color: #000000; margin-bottom: 16px; }
+.member-content .confirm-box {text-align: center; margin-bottom: 100px;}
+.member-content .btn01 {margin-left: 6px;}
+.member-content .file-info {margin-top: 7px; margin-bottom: 7px;}
+.member-content .file-name {font-size: 15px; letter-spacing: -0.45px; color: #555555; cursor: pointer}
+.member-content .hipen {margin:auto 3px auto 3px; color: #555}
+.member-content .input {margin-top: 5px; margin-bottom: 5px;}
+
+
+
+
+/* 사이즈 관련 */
+.w80 {width: 80px;}
+.w100 {width: 100px;}
+.w150 {width: 150px;}
+.w500 {width: 500px;}

@@ -10,14 +10,18 @@
 
     <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/reset.css">
     <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/app.css">
+    <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/modal.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="http://{{$_SERVER['HTTP_HOST']}}/css/compile/fontawesome.css">
+
+    @stack('scripts')
 
 </head>
 <body>
 <div id="app">
     <nav id="nav">
-        <div class="nav-logo"><img src="../../img/logo.png" alt=""></div>
+        <div class="nav-logo"><a href="/"><img src="../../img/logo.png" alt="로고 이미지"></a></div>
         <ul class="nav-list">
             <li class="">
                 <span>일일정보</span>
@@ -58,14 +62,15 @@
 
 
     <main id="main">
+
         <!--head-->
         <header>
             <ul>
                 <li>
-                    <a href="" class="logout-btn">로그아웃</a>
+                    <a href="login" class="logout-btn">로그아웃</a>
                 </li>
                 <li>
-                    <a href="" class="modify-btn">정보수정</a>
+                    <a href="confirm" class="modify-btn">정보수정</a>
                 </li>
                 <li class="introduce">
                     <span class="">홍길동</span> 님 환영합니다.
@@ -73,16 +78,10 @@
                 <li>
                     이용기간 : 2021-07-01 ~ 2021-07-31
                     <span class="d-day">(D-1)</span>
-                    <button class="extension">연장</button>
+                    <button class="btn extension">연장</button>
                 </li>
             </ul>
-
-
         </header>
-
-        <nav class="main-navi">
-
-        </nav>
 
         <!-- body -->
         <div class="content-body">
